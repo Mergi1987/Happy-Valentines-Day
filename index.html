@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Für Natalia ❤️</title>
+  <style>
+    body{
+      margin:0;height:100vh;display:grid;place-items:center;
+      font-family:system-ui;background:#fff;padding:18px;
+    }
+    .card{
+      width:min(92vw,420px);
+      padding:24px 20px;
+      border:1px solid #eee;
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+      text-align:center;
+    }
+    .heart{font-size:42px; line-height:1; margin-bottom:10px;}
+    h1{margin:0 0 8px;font-size:26px}
+    p{margin:0 0 14px;font-size:16px;line-height:1.45}
+    .small{font-size:14px; opacity:.75; margin-top:-2px; margin-bottom:18px;}
+    button{
+      padding:12px 16px;border-radius:14px;border:1px solid #ddd;
+      background:#fff;font-size:16px; cursor:pointer;
+    }
+    .poem{
+      text-align:left;
+      margin:14px auto 0;
+      padding:14px 14px;
+      border:1px solid #f0f0f0;
+      border-radius:14px;
+      background:#fafafa;
+      line-height:1.6;
+      font-size:15px;
+      white-space:pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="c">
+    <div class="heart">❤️</div>
+    <h1>Happy Valentine’s Day, Natalia</h1>
+    <p>
+      Ich bin stolz auf dich.<br>
+      Du bist etwas ganz Besonderes für mich.
+    </p>
+    <div class="small">— Krischan</div>
+
+    <button id="btn" onclick="showPoem()">Nachricht öffnen</button>
+
+    <div id="poem" class="poem" style="display:none;"></div>
+  </div>
+
+  <script>
+    function showPoem(){
+      const poemText =
+`Natalia, heute ist dein Tag aus Licht,
+weil mein Herz leiser deinen Namen spricht.
+Ich seh, wie stark du gehst, wie du bestehst —
+und wie du trotzdem sanft durchs Leben gehst.
+
+Ich bin stolz auf dich, auf jeden Schritt,
+auf deine Art, du nimmst so viel mit.
+Und wenn die Welt mal laut um dich herum,
+bin ich in Gedanken bei dir — still und stumm.
+
+Happy Valentine’s Day, mein schönster Grund.
+— Krischan ❤️`;
+
+      document.getElementById("poem").style.display = "block";
+      document.getElementById("poem").textContent = poemText;
+      document.getElementById("btn").textContent = "❤️";
+      document.getElementById("btn").disabled = true;
+      document.getElementById("btn").style.opacity = "0.8";
+      document.getElementById("btn").style.cursor = "default";
+    }
+  </script>
+</body>
+</html>
